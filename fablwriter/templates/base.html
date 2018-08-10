@@ -8,10 +8,13 @@
     <title>{% block title %} Default Title {% endblock %}</title>
     {% block headblock %}{% endblock %}
     <script>{% block script %}{% endblock %}</script>
-    <style>{% block style %}{% endblock %}</style>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Mystery+Quest');
+    {% block style %}{% endblock %}</style>
   </head>
   <body>
-
+    <div class=header>
+    <div class="logoimg"><img src="{% static "images/logo.png" %}"><br>
     <nav class = nav>
           <ul>
           {% if user.is_authenticated %}
@@ -31,13 +34,16 @@
           {% endif %}
             <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
             <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
-            <div class="logoimg"><img src="{% static "images/logo.png" %}">
+
             </a></div>
           </ul>
       </nav>
-
+    </div>
+    
+    <div class="blockcontent">
     {% block content %}
       #Contents goes in
     {% endblock %}
+    </div>
   </body>
 </html>

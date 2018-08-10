@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}FABLOPICASSO{% endblock %}
 {% block content %}
-    <h2>HİKAYELER</h2>
+    <h3>Hikayeler</h3>
     {% for fable in fables %}
       <a href="{% url 'publish' fable.id %}">{{ fable.title }}</a><br/>
     {% endfor %}

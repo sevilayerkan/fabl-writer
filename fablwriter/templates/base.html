@@ -3,9 +3,10 @@
 {% load static %}
 {% load i18n %}
 
-<!-- Stylesheets  -->
+<!-- For styling  -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="{% static 'layout/styles/newbase.css'%}" type="text/css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,9 +26,8 @@
     {% block style %}{% endblock %}</style>
   </head>
   <body>
-    <div class=header>
     <div class="logoimg"><img src="{% static "images/logo.png" %}"><br>
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar ">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
                 <li class="active">
@@ -44,8 +44,9 @@
                 {% endif %}
                 {% if user.is_authenticated %}
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello {{ user.username }}!
-                        <span class="caret"></span>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+                      Hello {{ user.username }}!
+                      <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
@@ -61,12 +62,20 @@
         </div>
       </nav>
 
-
-
     <div class="blockcontent">
     {% block content %}
       #Contents goes in
     {% endblock %}
     </div>
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-menu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
   </body>
 </html>

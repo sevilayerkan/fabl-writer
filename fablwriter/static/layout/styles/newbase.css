@@ -1,5 +1,17 @@
+/*Using less files
+Downloading
+-If you are make sure about node.js has installed.
+  in terminal write : npm install -g less
+-else
+  to install node.js : https://nodejs.org/en/download/package-manager/
+-end if
+Compiling
+-If you are in the folder of .less file
+  in terminal, just write : lessc newbase.less newbase.css
+*/
 body {
-  margin: 0px;
+  margin-left: 200px;
+  width: 1000px!important;
 }
 .header {
   margin: 0;
@@ -54,8 +66,10 @@ nav li a:hover,
   display: inline-block;
 }*/
 .dropdown-content {
+  display: none;
+  position: absolute;
   background-color: #77a8a8;
-  z-index: 1;
+  min-width: 160px;
 }
 .dropdown-content a {
   color: white;
@@ -65,7 +79,12 @@ nav li a:hover,
 }
 nav li a:hover:not(.active) {
   background-color: #77a8a8;
+  color: white;
 }
 /*.active {
   background-color: #639c9c;
 }*/
+p,
+.blockcontent {
+  width: 950px;
+}

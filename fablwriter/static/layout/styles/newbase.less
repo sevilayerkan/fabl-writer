@@ -18,10 +18,9 @@ Compiling
 @nav-back-color: #86d7bd;
 @nav-back-color-active: #77a8a8;
 
-
 body{
-  margin:0px;
-
+  margin-left: 200px;
+  width:1000px!important;
 }
 .header{
   margin: 0;
@@ -87,12 +86,12 @@ nav li a:hover, .dropdown:hover .dropbtn {
 }*/
 
 .dropdown-content {
-  //display: none;
-  //position: absolute;
+  display: none;
+  position: absolute;
   background-color: @nav-back-color-active;
-  //min-width: 160px;
+  min-width: 160px;
   //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  //z-index: 1;
 }
 
 .dropdown-content a {
@@ -113,8 +112,13 @@ nav li a:hover, .dropdown:hover .dropbtn {
 
 nav li a:hover:not(.active) {
   background-color: @nav-back-color-active;
+  color: white
 }
 
 /*.active {
   background-color: #639c9c;
 }*/
+
+p, .blockcontent{
+  width: 950px;
+}

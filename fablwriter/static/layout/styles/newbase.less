@@ -1,17 +1,32 @@
+//A comment comming from sky:This branch has little bit
+//'spagetti' codes due to lack of experience.
+//Please help and contribute our project.
+//With help we can write nicer codes together. <3
+
+/*Using less files
+
+-If you are make sure about node.js has installed
+  in terminal write : npm install -g less
+-else
+  to install node.js : https://nodejs.org/en/download/package-manager/
+-end if
+
 @nav-back-color: #86d7bd;
 @nav-back-color-active: #77a8a8;
 
 
 body{
   margin:0px;
+
 }
 .header{
   margin: 0;
   position: absolute;
   top:3%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  //left: 50%;
+  //margin-right: -50%;
+  //transform: translateX(-50%)
+  width: 70%;
 }
 .logoimg {
   float:left;
@@ -22,8 +37,12 @@ body{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
-
+.navbar{
+  background-color: @nav-back-color-active !important;
+  border: none;
+}
 .nav {
   height: 47px;
   text-decoration: none;
@@ -40,44 +59,44 @@ nav ul {
   background-color:  @nav-back-color-active;
 }
 
-nav li {
-  float: right;
-}
+/* nav li {
+   float: right;
+ } */
 
 nav li a, .dropbtn {
-  display: inline-block;
+  //display: inline-block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  //text-align: center;
+  //padding: 14px 16px;
+  //text-decoration: none;
   font-size: 20px;
   font-family: 'Mystery Quest', cursive;
-
+  background-color:  @nav-back-color-active !important;
 }
 
 nav li a:hover, .dropdown:hover .dropbtn {
   background-color: @nav-back-color-active;
 }
 
-nav li.dropdown {
+/*nav li.dropdown {
   display: inline-block;
-}
+}*/
 
 .dropdown-content {
-  display: none;
-  position: absolute;
+  //display: none;
+  //position: absolute;
   background-color: @nav-back-color-active;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  //min-width: 160px;
+  //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+  //padding: 12px 16px;
+  //text-decoration: none;
+  //display: block;
+  //text-align: left;
 }
 
 .dropdown-content a:hover {
@@ -85,7 +104,7 @@ nav li.dropdown {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  //display: block;
 }
 
 nav li a:hover:not(.active) {

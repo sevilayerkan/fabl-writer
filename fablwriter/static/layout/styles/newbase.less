@@ -42,7 +42,7 @@ body{
   margin-right: auto;
   z-index: 1;
 }
-.navbar{
+.navbar {
   background-color: @nav-back-color-active !important;
   border: none;
 }
@@ -50,23 +50,19 @@ body{
   height: 47px;
   text-decoration: none;
   align-items: center;
-  overflow: hidden;
+  //overflow: hidden;
   float: center;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style-type:none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color:  @nav-back-color-active;
+  //overflow: hidden;
+  background-color:  @nav-back-color-active !important;
 }
 
-/* nav li {
-   float: right;
- } */
-
-nav li a, .dropbtn {
+nav li a{
   //display: inline-block;
   color: white;
   //text-align: center;
@@ -77,42 +73,56 @@ nav li a, .dropbtn {
   background-color:  @nav-back-color-active !important;
 }
 
-nav li a:hover, .dropdown:hover .dropbtn {
+nav li a:hover, .dropdown:hover {
   background-color: @nav-back-color-active;
 }
 
+.dropdown,.dropdown-content {
+  background-color: @nav-back-color-active !important;
+}
+
+.dropdown {
+  li{
+    a{
+      color: white !important;
+    }
+  }
+}
 /*nav li.dropdown {
   display: inline-block;
 }*/
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: @nav-back-color-active;
-  min-width: 160px;
-  //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  //z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  //padding: 12px 16px;
-  //text-decoration: none;
-  //display: block;
-  //text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: @nav-back-color-active
-}
-
-.dropdown:hover .dropdown-content {
-  //display: block;
-}
+// .dropdown-content {
+//   display: none;
+//   position: absolute;
+//   background-color: @nav-back-color-active;
+//   min-width: 160px;
+//   //box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//   //z-index: 1;
+// }
+//
+// .dropdown-content a {
+//   color: white;
+//   //padding: 12px 16px;
+//   //text-decoration: none;
+//   //display: block;
+//   //text-align: left;
+// }
+//
+// .dropdown-content a:hover {
+//   background-color: @nav-back-color-active
+// }
+//
+// .dropdown:hover .dropdown-content {
+//   //display: block;
+// }
 
 nav li a:hover:not(.active) {
   background-color: @nav-back-color-active;
   color: white
+}
+nav a:hover{
+  background-color:@nav-back-color-active - 10 !important;
 }
 
 /*.active {

@@ -38,48 +38,40 @@ body {
   height: 47px;
   text-decoration: none;
   align-items: center;
-  overflow: hidden;
   float: center;
 }
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #77a8a8;
+  background-color: #77a8a8 !important;
 }
-/* nav li {
-   float: right;
- } */
-nav li a,
-.dropbtn {
+nav li a {
   color: white;
   font-size: 20px;
   font-family: 'Mystery Quest', cursive;
   background-color: #77a8a8 !important;
 }
 nav li a:hover,
-.dropdown:hover .dropbtn {
+.dropdown:hover {
   background-color: #77a8a8;
+}
+.dropdown,
+.dropdown-content {
+  background-color: #77a8a8 !important;
+}
+.dropdown li a {
+  color: white !important;
 }
 /*nav li.dropdown {
   display: inline-block;
 }*/
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #77a8a8;
-  min-width: 160px;
-}
-.dropdown-content a {
-  color: white;
-}
-.dropdown-content a:hover {
-  background-color: #77a8a8;
-}
 nav li a:hover:not(.active) {
   background-color: #77a8a8;
   color: white;
+}
+nav a:hover {
+  background-color: #6d9e9e !important;
 }
 /*.active {
   background-color: #639c9c;
